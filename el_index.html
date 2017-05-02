@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;     
+				docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+			};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="lib/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div id="iscroll" class="iscroll-wrap">
+		<div class="iscroll-box">
+			<header>
+				<div class="head-top">
+					<div class="address">
+						<i class="i1 iconfont icon-location"></i>
+						<span class="addre"></span>
+						<div id="map"></div>
+						<span class="i2 iconfont icon-xiangxiajiantou"></span>
+					</div>
+					<div class="weather">
+						<div class="info">
+							<span id="temperature" class="s1"></span>
+							<span id="sky-situ" class="info2"></span>
+						</div>
+						<i class="wea-img">
+							<img src="" alt="">
+						</i>
+					</div>
+				</div>
+				<input type="text" class="head-input" placeholder="搜索商家、商品">
+				<ul id="head_list" class="head-bottom">
+					<!-- <li> -->
+						 <!-- <a>冒菜</a> -->
+					<!-- </li> -->
+				</ul>
+			</header>
+			<nav class="swiper-container">
+				<div class="swiper-wrapper">
+					<ul class="page swiper-slide">
+						<li>
+							<img src="img/food1.jpeg" alt="">
+							<p>美食</p>
+						</li>
+						<li>
+							<img src="img/food2.jpeg" alt="">
+							<p>甜品饮品</p>
+						</li>
+						<li>
+							<img src="img/food3.jpeg" alt="">
+							<p>商店超市</p>
+						</li>
+						<li>
+							<img src="img/food4.jpeg" alt="">
+							<p>预订早餐</p>
+						</li>
+						<li>
+							<img src="img/food5.jpeg" alt="">
+							<p>果蔬生鲜</p>
+						</li>
+						<li>
+							<img src="img/food6.jpeg" alt="">
+							<p>新店特惠</p>
+						</li>
+						<li>
+							<img src="img/food7.jpeg" alt="">
+							<p>准时达</p>
+						</li>
+						<li>
+							<img src="img/food8.jpeg" alt="">
+							<p>下午茶</p>
+						</li>
+					</ul>
+					<ul class="page swiper-slide">
+						<li>
+							<img src="img/food9.jpeg" alt="">
+							<p>帮买帮送</p>
+						</li>
+						<li>
+							<img src="img/food10.jpeg" alt="">
+							<p>鲜花蛋糕</p>
+						</li>
+						<li>
+							<img src="img/food11.jpeg" alt="">
+							<p>汉堡</p>
+						</li>
+						<li>
+							<img src="img/food12.jpeg" alt="">
+							<p>日韩料理</p>
+						</li>
+						<li>
+							<img src="img/food13.jpeg" alt="">
+							<p>麻辣烫</p>
+						</li>
+						<li>
+							<img src="img/food14.jpeg" alt="">
+							<p>披萨意面</p>
+						</li>
+						<li>
+							<img src="img/food15.jpeg" alt="">
+							<p>川湘菜</p>
+						</li>
+						<li>
+							<img src="img/food16.jpeg" alt="">
+							<p>包子粥店</p>
+						</li>
+					</ul>
+				</div>
+				<div class="swiper-pagination"></div>
+			</nav>
+			<section>
+				<h3>推荐商家</h3>
+				<div id="section-content">
+					<!-- <div class="content">
+						<div class="con-img">
+							<img src="img/c1.jpeg" alt="">
+						</div>
+						<div class="con-con">
+							<div class="con1">
+								<span></span>
+								<p class="title">泰煌鸡（南京西路店）</p>
+								<div class="icon1">
+									<i>保</i>
+									<i>准</i>
+								</div>
+							</div>
+							<div class="con2">
+								<span></span>
+								<span class="grade">4.8</span>
+								<p class="con-num">月售<span>3738</span>单</p>
+								<div class="icon2">
+									<i class="i1">准时达</i>
+									<i class="i2">蜂鸟专送</i>
+								</div>
+							</div>
+							<div class="con3">
+								<p class="con3-p1">￥<span>30</span>起送 / 配送费￥<span>5</span></p>
+								<p class="con3-p2"><span>469</span>m / <span class="time">28分钟</span></p>
+							</div>
+						</div>	
+					</div> -->
+				</div>
+				<div class="load">正在载入更多商家...</div>
+			</section>	
+		</div>
+	</div>
+	<footer>
+		<ul>
+			<li class="active">
+				<span class="iconfont icon-changyonglogo40"></span>
+				<p>外卖</p>
+			</li>
+			<li>
+				<span class="iconfont icon-faxian"></span>
+				<p>发现</p>
+			</li>
+			<li>
+				<span class="iconfont icon-dingdan"></span>
+				<p>订单</p>
+			</li>
+			<li>
+				<span class="iconfont icon-app-user-a"></span>
+				<p>我的</p>
+			</li>
+		</ul>
+	</footer>
+	<div class="change">
+		<div class="head">
+			<span id="back" class="iconfont icon-jiantou"></span>
+			<h1>选择地址</h1>
+			<input type="text" placeholder="请输入地址">
+		</div>
+	</div>
+	<div class="top">
+		<span class="iconfont icon-fanhuidingbu"></span>
+	</div>
+	
+	
+	<script src="lib/zepto.min.js"></script>
+	<script src="lib/zepto.tap.js"></script>
+	<script src="lib/swiper-3.3.1.min.js"></script>
+	<script src="lib/iscroll-probe.js"></script>
+	<script src="http://webapi.amap.com/maps?v=1.3&key=4578d56fa88af67a84fbc89177120c2b"></script>
+	<script src="js/index.js"></script>
+	<script src="lib/artTamplate.js"></script>
+	<script id="headList" type="text/html">
+		{{each headList as val index}}
+			<li>
+				<a href="#">{{val}}</a>
+			</li>
+		{{/each}}
+	</script>
+	<script id="sectionList" type="text/html">
+		{{each sectionList as val index}}
+			<div class="content">
+				<div class="con-img">
+					<img src="{{val.image_path}}" alt="">
+				</div>
+				<div class="con-con">
+					<div class="con1">
+						<span></span>
+						<p class="title">{{val.description}}</p>
+						<div class="icon1">
+							<i>保</i>
+							<i>准</i>
+						</div>
+					</div>
+					<div class="con2">
+						<span></span>
+						<span class="grade">{{val.rating}}</span>
+						<p class="con-num">月售<span>{{val.recent_order_num}}</span>单</p>
+						<div class="icon2">
+							<i class="i1">准时达</i>
+							<i class="i2">蜂鸟专送</i>
+						</div>
+					</div>
+					<div class="con3">
+						<p class="con3-p1">￥<span>{{val.piecewise_agent_fee.rules.price}}</span>起送 / <span>{{val.piecewise_agent_fee.tips}}</span></p>
+						<p class="con3-p2"><span>{{val.distance}}</span>m / <span class="time"><i style="font-style: normal;">{{val.order_lead_time}}</i>分钟</span></p>
+					</div>
+				</div>	
+			</div>
+		{{/each}}
+	</script>
+</body>
+</html>
